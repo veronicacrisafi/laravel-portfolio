@@ -3,8 +3,9 @@
 @section('title', 'Aggiungi un nuovo progetto!')
 
 @section('content')
-    <form action="{{ route('projects.store') }}" method="POST">
+    <form action="{{ route('projects.update', $project) }}" method="POST">
         @csrf
+        @method('PUT')
         <div class="form-control mb-3 d-flex flex-column">
             <label for="titolo">Titolo</label>
             <input type="text" name="titolo" id="titolo" value="{{ $project->titolo }}">
