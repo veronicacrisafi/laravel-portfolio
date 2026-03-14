@@ -34,6 +34,12 @@ class ProjectController extends Controller
         $data = $request->all();
         //dd($data);
         $newProject = new Project();
+        $newProject->titolo = $data['title'] ?? null;
+        $newProject->autore = $data['author'] ?? null;
+        $newProject->categoria = $data['category'] ?? null;
+        $newProject->contenuto = $data['content'] ?? null;
+        $newProject->save();
+        dd($newProject);
     }
 
     /**

@@ -6,20 +6,20 @@
     <form action="{{ route('projects.store') }}" method="POST">
         @csrf
         <div class="form-control mb-3 d-flex flex-column">
-            <label for="title">Titolo</label>
-            <input type="text" name="title" id="title">
+            <label for="titolo">Titolo</label>
+            <input type="text" name="titolo" id="titolo">
         </div>
         <div class="form-control mb-3 d-flex flex-column">
-            <label for="author">Autore</label>
-            <input type="text" name="author" id="author">
+            <label for="autore">Autore</label>
+            <input type="text" name="autore" id="autore">
         </div>
         <div class="form-control mb-3 d-flex flex-column">
-            <label for="category">Categoria</label>
-            <input type="text" name="category" id="category">
+            <label for="categoria">Categoria</label>
+            <input type="text" name="categoria" id="categoria">
         </div>
         <div class="form-control mb-3 d-flex flex-column">
-            <label for="content">Contenuto</label>
-            <textarea name="content" id="content" width="100%" rows="5"></textarea>
+            <label for="contenuto">Contenuto</label>
+            <textarea name="contenuto" id="contenuto" width="100%" rows="5"></textarea>
         </div>
         <input type="submit" value="Salva">
     </form>
