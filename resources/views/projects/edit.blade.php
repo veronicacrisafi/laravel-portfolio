@@ -16,7 +16,11 @@
         </div>
         <div class="form-control mb-3 d-flex flex-column">
             <label for="categoria">Categoria</label>
-            <input type="text" name="categoria" id="categoria" value="{{ $project->categoria }}">
+            <select name="categoria" id="categoria">
+                <option value="Web Design">Web Design</option>
+                <option value="Graphic Design">Graphic Design</option>
+                <option value="Back End">Back End</option>
+            </select>
         </div>
         <div class="form-control mb-3 d-flex flex-column">
             <label for="contenuto">Contenuto</label>
