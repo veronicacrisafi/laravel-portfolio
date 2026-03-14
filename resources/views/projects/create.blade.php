@@ -4,6 +4,7 @@
 
 @section('content')
     <form action="{{ route('projects.store') }}" method="POST">
+        @csrf
         <div class="form-control mb-3 d-flex flex-column">
             <label for="title">Titolo</label>
             <input type="text" name="title" id="title">
