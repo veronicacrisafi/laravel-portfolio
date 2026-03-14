@@ -34,10 +34,10 @@ class ProjectController extends Controller
         $data = $request->all();
         //dd($data);
         $newProject = new Project();
-        $newProject->titolo = $data['title'] ?? null;
-        $newProject->autore = $data['author'] ?? null;
-        $newProject->categoria = $data['category'] ?? null;
-        $newProject->contenuto = $data['content'] ?? null;
+        $newProject->titolo = $data['titolo'] ?? null;
+        $newProject->autore = $data['autore'] ?? null;
+        $newProject->categoria = $data['categoria'] ?? null;
+        $newProject->contenuto = $data['contenuto'] ?? null;
         $newProject->save();
         //dd($newProject);
         return redirect()->route('projects.show', $newProject);
@@ -63,9 +63,15 @@ class ProjectController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Project $project)
     {
-        //
+        $data = $request->all();
+        $project->titolo = $data['titolo'];
+        $project->autore = $data['autore'];
+        $project->categoria = $data['categoria'];
+        $project->contenuto = $data['contenuto'];
+        $project->update();
+        return redirect()->route("projects.show", $project);
     }
 
     /**
