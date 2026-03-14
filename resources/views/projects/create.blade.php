@@ -25,7 +25,7 @@
             <label for="contenuto">Contenuto</label>
             <textarea name="contenuto" id="contenuto" width="100%" rows="5"></textarea>
         </div>
-        <input type="submit" value="Salva">
+        <input class="btn btn-outline-success" type="submit" value="Salva">
     </form>
 
 @endsection
