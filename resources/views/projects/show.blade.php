@@ -1,22 +1,28 @@
-@extends('layouts.admin')
+@extends('layouts.projects')
 
-@section('title', $project->titolo)
-
+@section('title', 'Progetto')
+@section('backLink')
+    <p class="mb-3">
+        <a class="btn btn-outline-secondary" href="{{ route('projects.index') }}">🔙 confermo e torno ai progetti</a>
+    </p>
+@endsection
 @section('content')
     <div class="row">
         <div class="col">
             <div class="card h-100">
-                <div class="d-flex py-4">
-                    <a class="btn btn-outline-warning" href="{{ route('projects.edit', $project) }}">Modifica</a>
-                    <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        Elimina
-                    </button>
-                </div>
                 <div class="card-body">
                     <h4 class="card-title mb-5">{{ $project->titolo }}</h4>
                     <h5 class="card-subtitle mb-4 text-body-secondary">Autore: {{ $project->autore }}</h5>
                     <h6 class="card-subtitle mb-3">Categoria: {{ $project->categoria }}</h6>
                     <p class="card-text">{{ $project->contenuto }}</p>
+                    <div class="d-flex py-4">
+                        <a class="btn btn-outline-warning me-5 w-50"
+                            href="{{ route('projects.edit', $project) }}">Modifica</a>
+                        <button type="button" class="btn btn-outline-danger w-50" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            Elimina
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -45,5 +51,11 @@
         </div>
     </div>
 
+    <style>
+        .link-hover:hover {
+            color: #0d6efd !important;
+            text-decoration: underline !important;
+        }
+    </style>
 
 @endsection

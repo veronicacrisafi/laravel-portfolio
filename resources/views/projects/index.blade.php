@@ -1,6 +1,6 @@
-@extends('layouts.admin')
+@extends('layouts.projects')
 
-@section('title', 'Progetti')
+@section('title', 'Tutti i progetti')
 
 @section('content')
     <a href="{{ route('projects.create') }}" class="btn btn-outline-success mb-4">Aggiungi nuovo progetto</a>

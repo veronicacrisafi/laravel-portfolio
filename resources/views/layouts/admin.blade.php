@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin - @yield('title', 'Dashboard')</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     @vite('resources/scss/app.scss')
 </head>
 
@@ -13,7 +12,10 @@
     <header class="admin-header">
         <div class="container d-flex align-items-center justify-content-between">
             <h1 class="mb-0">Area Admin</h1>
-            <a href="/" class="btn btn-outline-light">Home</a>
+            <div>
+                <a href="/" class="btn btn-outline-light">Home</a>
+                <a href="{{ route('projects.index') }}" class="btn btn-outline-light">Tutti i progetti</a>
+            </div>
         </div>
     </header>
     <div class="container">
@@ -32,7 +34,6 @@
     <footer class="text-center text-muted py-4 mt-5">
         &copy; {{ date('Y') }} Il tuo Portfolio Admin
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

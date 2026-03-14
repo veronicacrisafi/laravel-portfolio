@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.projects')
 
 @section('title', 'Aggiungi un nuovo progetto!')
 
@@ -25,7 +25,10 @@
             <label for="contenuto">Contenuto</label>
             <textarea name="contenuto" id="contenuto" width="100%" rows="5"></textarea>
         </div>
-        <input class="btn btn-outline-success" type="submit" value="Salva">
+        <div class="d-flex flex-row gap-2">
+            <input type="submit" class="btn btn-outline-success w-50" value="Salva">
+            <a href="{{ route('projects.index') }}" class="btn btn-outline-secondary w-50">Indietro</a>
+        </div>
     </form>
 
 @endsection
