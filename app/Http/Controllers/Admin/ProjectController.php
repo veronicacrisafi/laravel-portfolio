@@ -31,7 +31,8 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        return " sei nello store";
+        $data = $request->all();
+        dd($data);
     }
 
     /**
