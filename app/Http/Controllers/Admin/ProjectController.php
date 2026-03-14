@@ -39,7 +39,8 @@ class ProjectController extends Controller
         $newProject->categoria = $data['category'] ?? null;
         $newProject->contenuto = $data['content'] ?? null;
         $newProject->save();
-        dd($newProject);
+        //dd($newProject);
+        return redirect()->route('projects.show', $newProject);
     }
 
     /**
