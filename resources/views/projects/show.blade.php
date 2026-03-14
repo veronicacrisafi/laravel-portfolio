@@ -5,6 +5,11 @@
 @section('content')
     <div class="row">
         <div class="col">
+            <div class="d-flex py-4">
+                <a class="btn btn-outline-warning" href="{{ route('projects.edit', $project) }}">Modifica</a>
+                <a class="btn btn-outline-danger" href="{{ route('projects.destroy', $project) }}">Elimina</a>
+
+            </div>
             <div class="card h-100">
                 <div class="card-body">
                     <h4 class="card-title mb-5">{{ $project->titolo }}</h4>
