@@ -13,7 +13,7 @@
                 <div class="card-body">
                     <h4 class="card-title mb-5">{{ $project->titolo }}</h4>
                     <h5 class="card-subtitle mb-4 text-body-secondary">Autore: {{ $project->autore }}</h5>
-                    <h6 class="card-subtitle mb-3">Categoria: {{ $project->categoria }}</h6>
+                    <h6 class="card-subtitle mb-3">Categoria: {{ $project->type->nome }}</h6>
                     <p class="card-text">{{ $project->contenuto }}</p>
                     <div class="d-flex py-4">
                         <a class="btn btn-outline-warning me-5 w-50"
