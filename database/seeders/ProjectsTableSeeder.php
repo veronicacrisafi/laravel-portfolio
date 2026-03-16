@@ -19,7 +19,8 @@ class ProjectsTableSeeder extends Seeder
             $newProject = new Project();
             $newProject->titolo = $faker->sentence();
             $newProject->autore = $faker->name();
-            $newProject->categoria = $faker->word();
+            //$newProject->categoria = $faker->word();
+            $newProject->type_id = rand(1, 5);
             $newProject->contenuto = $faker->paragraph();
             $newProject->save();
         }
