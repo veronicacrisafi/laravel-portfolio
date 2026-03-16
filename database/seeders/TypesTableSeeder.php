@@ -1,0 +1,19 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+
+class TypesTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+        $types = ['Laravel', 'MySQL', 'PHP', 'Internet', 'Videogiochi'];
+        foreach ($types as $type) {
+        }
+    }
+}
