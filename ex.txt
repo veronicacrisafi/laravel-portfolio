@@ -33,9 +33,9 @@ Bonus
 Svolgimento
 I task da svolgere sono diversi, ma alcuni di essi sono un ripasso 
 di ciò che abbiamo fatto nelle lezioni dei giorni scorsi: 
-Creiamo il modello Type, 
+✅Creiamo il modello Type, 
 ✅con relativa migrazione 
-ed un seeder per inserire i types nel Database
+✅ed un seeder per inserire i types nel Database
 Creiamo anche la migration per modificare la tabella projects, che dovrà ora contenere la chiave esterna type_id
 Nei modelli Type e Project, aggiungiamo i metodi per definire la relazione one-to-many
 Nella pagina di dettaglio del progetto, mostriamo il Type a cui il progetto appartiene. 
