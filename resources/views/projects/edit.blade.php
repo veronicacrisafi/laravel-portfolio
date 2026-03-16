@@ -15,11 +15,12 @@
             <input type="text" name="autore" id="autore" value="{{ $project->autore }}" required>
         </div>
         <div class="form-control mb-3 d-flex flex-column">
-            <label for="categoria">Categoria</label>
-            <select name="categoria" id="categoria" required>
-                <option value="Web Design">Web Design</option>
-                <option value="Graphic Design">Graphic Design</option>
-                <option value="Back End">Back End</option>
+            <label for="type_id">Categoria</label>
+            <select name="type_id" id="type_id" required>
+                @foreach ($types as $type)
+                    <option value="{{ $type->id }}" {{ $project->type_id == $type->id ? 'selected' : '' }}>
+                        {{ $type->nome }}</option>
+                @endforeach
             </select>
         </div>
         <div class="form-control mb-3 d-flex flex-column">

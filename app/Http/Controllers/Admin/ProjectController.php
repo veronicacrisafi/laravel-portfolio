@@ -38,7 +38,7 @@ class ProjectController extends Controller
         $newProject = new Project();
         $newProject->titolo = $data['titolo'] ?? null;
         $newProject->autore = $data['autore'] ?? null;
-        $newProject->categoria = $data['categoria'] ?? null;
+        $newProject->type_id = $data['type_id'] ?? null;
         $newProject->contenuto = $data['contenuto'] ?? null;
         $newProject->save();
         //dd($newProject);
@@ -59,7 +59,8 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        return view("projects.edit", compact('project'));
+        $types = Type::all();
+        return view("projects.edit", compact('project', 'types'));
     }
 
     /**
@@ -70,7 +71,7 @@ class ProjectController extends Controller
         $data = $request->all();
         $project->titolo = $data['titolo'];
         $project->autore = $data['autore'];
-        $project->categoria = $data['categoria'];
+        $project->type_id = $data['type_id'];
         $project->contenuto = $data['contenuto'];
         $project->update();
         return redirect()->route("projects.show", $project);
