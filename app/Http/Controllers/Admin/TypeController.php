@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Type;
 
 class TypeController extends Controller
 {
@@ -12,7 +13,9 @@ class TypeController extends Controller
      */
     public function index()
     {
-        return view('types.index');
+        $types = Type::all();
+        //dd($types);
+        return view('types.index', compact('types'));
     }
 
     /**
