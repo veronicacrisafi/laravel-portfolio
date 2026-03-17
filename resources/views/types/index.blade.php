@@ -3,6 +3,8 @@
 @section('title', ' Tutte le tipologie')
 
 @section('content')
+    <a href="{{ route('types.create') }}" class="btn btn-outline-success mb-4">Aggiungi una nuova tipologia</a>
+
     <div class="row">
         @foreach ($types as $type)
             <div class="col-4 my-3">
