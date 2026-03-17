@@ -3,8 +3,9 @@
 @section('title', 'Aggiungi una tipologia')
 
 @section('content')
-    <form action="{{ route('types.store') }}" method="POST">
+    <form action="{{ route('types.update', $type) }}" method="POST">
         @csrf
+        @method('PUT')
         <div class="form-control mb-3 pb-3 d-flex flex-column">
             <label for="nome">Nome</label>
             <input type="text" name="nome" id="nome" value="{{ $type->nome }}" required>
