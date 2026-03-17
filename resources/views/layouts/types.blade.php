@@ -26,13 +26,12 @@
                 <h1 class="mb-5">
                     @yield('title')
                 </h1>
-                @yield('backLink')
                 @yield('content')
             </main>
         </div>
     </div>
     <footer class="text-center text-muted py-4 mt-5">
-        &copy; {{ date('Y') }} Il tuo Portfolio Progetti
+        &copy; {{ date('Y') }} Il tuo Portfolio Tipologie
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
