@@ -14,7 +14,8 @@
         <div class="container d-flex align-items-center justify-content-between">
             <h1 class="mb-0">I miei progetti!</h1>
             <div>
-                <a href="{{ route('projects.index') }}" class="btn btn-outline-light">Tutti i progetti</a>
+                <a href="{{ route('projects.index') }}" class="btn btn-outline-light">Progetti</a>
+                <a href="{{ route('types.index') }}" class="btn btn-outline-light">Tipologie</a>
                 <a href="/" class="btn btn-outline-light">Home</a>
                 <a href="{{ route('admin.index') }}" class="btn btn-outline-light">Admin</a>
             </div>

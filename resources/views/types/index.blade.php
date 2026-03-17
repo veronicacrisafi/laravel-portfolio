@@ -1,6 +1,6 @@
 @extends('layouts.types')
 
-@section('title', ' Le mie tipologie!')
+@section('title', ' Tutte le tipologie')
 
 @section('content')
     <div class="row">
