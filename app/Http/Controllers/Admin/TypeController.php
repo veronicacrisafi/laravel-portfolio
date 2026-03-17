@@ -64,14 +64,15 @@ class TypeController extends Controller
         $type->nome = $data['nome'];
         $type->descrizione = $data['descrizione'];
         $type->update();
-        return redirect()->route('type.show', $type);
+        return redirect()->route('types.show', $type);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Type $type)
     {
-        //
+        $type->delete();
+        return redirect()->route('types.index');
     }
 }
