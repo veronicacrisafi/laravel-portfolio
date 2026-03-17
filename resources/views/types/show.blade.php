@@ -7,7 +7,11 @@
         <div class="col">
             <div class="card h-100">
                 <div class="card-body">
-                    <h4 class="card-title mb-5">{{ $type->nome }}</h4>
+                    <h1 class="card-title text-center mb-5">
+                        {{ $type->nome }}</h1>
+                    <div class="card-subtitle text-center">
+                        <p>{{ $type->descrizione }}</p>
+                    </div>
 
                     <div class="d-flex py-4">
                         <a class="btn btn-outline-warning me-5 w-50" href="">Modifica</a>

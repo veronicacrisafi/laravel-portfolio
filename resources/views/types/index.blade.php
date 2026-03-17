@@ -11,6 +11,9 @@
                         <div class="card-title text-center my-5">
                             <h1> {{ $type->nome }}</h1>
                         </div>
+                        <div class="card-subtitle">
+                            <p>{{ $type->descrizione }}</p>
+                        </div>
                         <div class="mt-auto">
                             <a class='btn btn-outline-primary w-100'
                                 href="{{ route('types.show', $type->id) }}">Visualizza</a>
