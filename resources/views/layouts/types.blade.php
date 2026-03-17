@@ -26,6 +26,7 @@
                 <h1 class="mb-5">
                     @yield('title')
                 </h1>
+                @yield('backLink')
                 @yield('content')
             </main>
         </div>

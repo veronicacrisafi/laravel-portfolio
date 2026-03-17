@@ -31,7 +31,12 @@ class TypeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $newType = new Type();
+        $newType->nome = $data['nome'];
+        $newType->descrizione = $data['descrizione'];
+        $newType->save();
+        return redirect()->route('types.show', $newType);
     }
 
     /**

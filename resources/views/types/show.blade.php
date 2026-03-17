@@ -1,6 +1,11 @@
 @extends('layouts.types')
 
 @section('title', 'Tipologia')
+@section('backLink')
+    <p class="mb-3">
+        <a class="btn btn-outline-secondary" href="{{ route('types.index') }}">🔙 confermo e torno alle tipologie</a>
+    </p>
+@endsection
 
 @section('content')
     <div class="row">
