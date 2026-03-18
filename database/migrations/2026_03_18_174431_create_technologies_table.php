@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('technologies', function (Blueprint $table) {
             $table->id();
             $table->string('nome');
-            $table->string('color', 7);
+            $table->string('colore', 7);
             $table->timestamps();
         });
     }
