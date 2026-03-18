@@ -79,6 +79,8 @@ class ProjectController extends Controller
         $project->type_id = $data['type_id'];
         $project->contenuto = $data['contenuto'];
         $project->update();
+
+        $project->technologies()->sync($data['technology']);
         return redirect()->route("projects.show", $project);
     }
 
