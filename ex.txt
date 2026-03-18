@@ -43,8 +43,8 @@ di ciò che abbiamo fatto nelle lezioni dei giorni scorsi:
 ✅Gestiamo inoltre il salvataggio di questa associazione progetto-tipologia nel controller ProjectController
 Bonus
 ✅Aggiungere le operazioni CRUD anche per il model Type, 
-in modo da gestire le tipologie di progetto 
-direttamente dal pannello di amministrazione.
+✅in modo da gestire le tipologie di progetto 
+✅direttamente dal pannello di amministrazione.
 
 
 
