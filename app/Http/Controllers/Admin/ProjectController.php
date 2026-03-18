@@ -43,6 +43,8 @@ class ProjectController extends Controller
         $newProject->type_id = $data['type_id'] ?? null;
         $newProject->contenuto = $data['contenuto'] ?? null;
         $newProject->save();
+
+        $newProject->technologies()->attach($data['technologies']);
         //dd($newProject);
         return redirect()->route('projects.show', $newProject);
     }
