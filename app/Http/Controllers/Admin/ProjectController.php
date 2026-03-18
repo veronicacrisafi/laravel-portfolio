@@ -44,7 +44,10 @@ class ProjectController extends Controller
         $newProject->contenuto = $data['contenuto'] ?? null;
         $newProject->save();
 
-        $newProject->technologies()->attach($data['technology']);
+        if ($request->has('technologies')) {
+            $newProject->technologies()->attach($data['technologies']);
+        }
+
         //dd($newProject);
         return redirect()->route('projects.show', $newProject);
     }
@@ -81,7 +84,7 @@ class ProjectController extends Controller
         $project->update();
 
         if ($request->has('technologies')) {
-            $project->technologies()->sync($data['technology']);
+            $project->technologies()->sync($data['technologies']);
         } else {
             $project->technologies()->detach();
         }
@@ -93,6 +96,7 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
+        $project->technologies()->detach();
         $project->delete();
         return redirect()->route("projects.index");
     }
