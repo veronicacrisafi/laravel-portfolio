@@ -26,10 +26,10 @@
         <div class="form-control mb-3 d-flex flex-wrap">
             @foreach ($technologies as $technology)
                 <div class="technology me-5">
-                    <input type="checkbox" name="technology[]" value="{{ $technology->id }}"
+                    <input type="checkbox" name="technologies[]" value="{{ $technology->id }}"
                         id="technology-{{ $technology->id }}"
                         {{ $project->technologies->contains($technology->id) ? 'checked' : '' }}>
-                    <label for="technology-{{ $technology->id }}">{{ $technology->nome }}</label>
+                    <label for="technologies-{{ $technology->id }}">{{ $technology->nome }}</label>
                 </div>
             @endforeach
         </div>
