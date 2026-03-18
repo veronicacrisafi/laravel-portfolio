@@ -21,6 +21,23 @@
                 @endforeach
             </select>
         </div>
+
+        <div class="form-control mb-3 d-flex flex-wrap">
+            @foreach ($technologies as $technology)
+                <div class="technology me-5">
+                    <input type="checkbox">
+                    <label for="">{{ $technology->nome }}</label>
+                </div>
+            @endforeach
+        </div>
+
+
+
+
+
+
+
+
         <div class="form-control mb-3 d-flex flex-column">
             <label for="contenuto">Contenuto</label>
             <textarea name="contenuto" id="contenuto" width="100%" rows="5" required></textarea>
