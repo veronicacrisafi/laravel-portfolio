@@ -80,7 +80,11 @@ class ProjectController extends Controller
         $project->contenuto = $data['contenuto'];
         $project->update();
 
-        $project->technologies()->sync($data['technology']);
+        if ($request->has('technologies')) {
+            $project->technologies()->sync($data['technology']);
+        } else {
+            $project->technologies()->detach();
+        }
         return redirect()->route("projects.show", $project);
     }
 
